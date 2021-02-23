@@ -1,0 +1,25 @@
+# gf pack config packed/data.go -n=packed
+
+# Proxy配置
+[proxy]
+	# HTTP反向代理服务地址
+	http-address = ":10080"
+	# GRPC反向代理服务地址
+	grpc-address = ":18000"
+
+# 服务端配置
+[server]
+    address = ":18888"
+    logpath = "/var/log/www/mesh-proxy/server"
+
+# 日志配置管理
+[logger]
+    path   = "/var/log/www/mesh-proxy"
+    level  = "all"
+    stdout = false
+
+# 编译选项
+[compiler]
+    name     = "main"
+    arch     = "amd64"
+    system   = "linux"
